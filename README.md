@@ -62,8 +62,7 @@ PHP에서는 함수를 호출할 때 *문자열*로 호출할 함수를 정할 �
 getallheaders()[chr(65)](getallheaders()[chr(66)]); // 헤더에 A: system, B: ls를 붙여서 요청해야 한다.
 ```
 
-### register_globals
-![https://img.shields.io/badge/works%20with-~5.3-blue](works with ~5.3)
+### register_globals ![works with ~5.3](https://img.shields.io/badge/works%20with-~5.3-blue)
 굳이 PHP 5.3 이하임을 강조하고 있거나, 어쨌든 그렇다면, `register_globals`가 활성화되어있을 수 있다. *입력을 그대로 전역 변수에 선언*하는 설정이다.
 
 ```php
@@ -73,11 +72,11 @@ if(isset($admin)) {
 }
 ```
 
-위와 같은 코드가 있을 때, `register_globals`가 활성화되어있다면, `https://victim.com?admin=1`로 들어갈 수 있다. 그러면 `$admin`이 선언되고, 결과적으로, 위 코드에서는 플래그가 출력될 것이다.
+위와 같은 코드가 있을 때, `register_globals`가 활성화되어있다면, `https://victim.com?admin=1`로 접속하면 `$admin`이 `1`로 선언된다. 결과적으로, 위 코드에서는 플래그가 출력될 것이다.
 
 ## 취약한 함수
 PHP의 수많은 함수는 생각보다 **더** 취약하다. 아래는 그의 목록이다.
 
-WIP
+###
 
 ## 기타
